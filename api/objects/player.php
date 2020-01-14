@@ -121,4 +121,16 @@ class Player{
             }
         }
     }
+
+    public function read_all(){
+        $query = "select * from " . $this->table_name;
+
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+
+        // execute query
+        $stmt->execute();
+
+        return $stmt;
+    }
 }

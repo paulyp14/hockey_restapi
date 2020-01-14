@@ -23,7 +23,6 @@ if($num>0){
 
     // products array
     $leagues_arr=array();
-    $leagues_arr["leagues"]=array();
 
     // retrieve our table contents
     // fetch() is faster than fetchAll()
@@ -43,7 +42,7 @@ if($num>0){
             "created" => $created
         );
 
-        array_push($leagues_arr["leagues"], $league_item);
+        array_push($leagues_arr, $league_item);
     }
 
     // set response code - 200 OK
@@ -59,6 +58,6 @@ else{
 
     // tell the user no products found
     echo json_encode(
-        array("message" => "No products found.")
+        array()
     );
 }
