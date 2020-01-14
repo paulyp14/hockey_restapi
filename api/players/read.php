@@ -79,11 +79,12 @@ if($num>0){
         );
 
         array_push($plyrs, $plyr_item);
-
-        // set response code - 200 OK
-        http_response_code(200);
-        echo json_encode($plyrs);
     }
+
+    // set response code - 200 OK
+    http_response_code(200);
+    echo json_encode($plyrs);
+    
 } else {
 
     http_response_code(200);
